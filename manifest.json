@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "WHS Helper",
+  "version": "1.0",
+  "description": "과제는 너무나 귀찮지만 열심히 해야겠지요",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://whitehatschool.kr/home/kor/M864378719/dashboard/assignment/*",
+        "https://whitehatschool.kr/home/kor/M779612734/dashboard/offline/lecture/index.do*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
