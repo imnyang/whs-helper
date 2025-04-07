@@ -13,8 +13,8 @@ KITRI 화이트햇 스쿨(WHS) 웹 사이트의 UX를 개선하기 위한 Chrome
     * 마감이 임박한 경우(3일 이내), 빨간색 배경
  * 그런 거 있잖아요 ... 4월 18일까지라고 써져 있는데 0시 0분까지 였던거
      * 그래서 0시 0분까지 마감인 과제는 전날 23시 59분으로 표시되도록 바꿔 마감일을 혼동하지 않게 바꿉니다.
-<img src="4.png" alt="과제 목록 정렬 및 스타일 적용" style="width:750px;">
-<img src="3.png" alt="과제 목록 정렬 및 스타일 적용" style="width:450px;">
+<img src="4e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:750px;">
+<img src="3e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:450px;">
 
 <br />
 
