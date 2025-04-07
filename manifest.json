@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "WHS Helper",
-  "version": "1.0",
+  "version": "1.1",
   "description": "과제는 너무나 귀찮지만 열심히 해야겠지요",
   "action": {
     "default_popup": "popup.html"
