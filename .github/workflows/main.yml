@@ -18,7 +18,6 @@ jobs:
 
       - name: Copy non-hidden files to output
         run: |
-          shopt -s extglob
           cp -r !(.git|.*) output/
 
       - name: Compress non-hidden files
