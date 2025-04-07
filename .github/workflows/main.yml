@@ -18,6 +18,7 @@ jobs:
 
       - name: Copy non-hidden files to output
         run: |
+          rm -f README.md
           find . -maxdepth 1 -type f -not -name ".*" -exec cp {} output/ \;
 
       - name: Upload archive.zip to GitHub Artifacts
