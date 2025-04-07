@@ -20,14 +20,9 @@ jobs:
         run: |
           find . -maxdepth 1 -type f -not -name ".*" -exec cp {} output/ \;
 
-      - name: Compress non-hidden files
-        run: |
-          cd output
-          zip -r ../archive.zip .
-
       - name: Upload archive.zip to GitHub Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: extension
-          path: archive.zip
+          path: output
 
