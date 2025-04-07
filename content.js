@@ -46,6 +46,8 @@
       if (!deadlineStr) return;
 
       const deadline = parseDeadline(deadlineStr);
+      row._deadline = deadline; // ✅ 정렬을 위한 속성 저장
+
       const deadlineDate = new Date(deadline.getFullYear(), deadline.getMonth(), deadline.getDate());
       const diffDays = (deadlineDate - today) / (24 * 60 * 60 * 1000);
       const diffMs = deadline - now;
@@ -68,11 +70,22 @@
 
       periodCell.textContent = `${formatDate(deadline)}${remainingStr}`;
 
-      if (isExpired && isSubmitted) { categories.submittedExpired.push(row); }
-      else if (isExpired) { categories.expired.push(row); }
-      else if (isSubmitted) { categories.submitted.push(row); }
-      else if (diffDays >= 0 && diffDays <= 3) { categories.urgent.push(row); }
-      else { categories.notSubmitted.push(row); }
+      if (isExpired && isSubmitted) {
+        categories.submittedExpired.push(row);
+      } else if (isExpired) {
+        categories.expired.push(row);
+      } else if (isSubmitted) {
+        categories.submitted.push(row);
+      } else if (diffDays >= 0 && diffDays <= 3) {
+        categories.urgent.push(row);
+      } else {
+        categories.notSubmitted.push(row);
+      }
+    });
+
+    // ✅ 카테고리별로 마감 임박 순 정렬
+    Object.values(categories).forEach(categoryRows => {
+      categoryRows.sort((a, b) => a._deadline - b._deadline);
     });
 
     // 테이블 생성 및 스타일링
@@ -122,7 +135,7 @@
       });
     }
 
-    // 각 카테고리별로 테이블 생성 및 스타일링
+    // 카테고리별 테이블 생성 및 스타일링
     if (categories.urgent.length > 0) {
       const urgentTable = createTable("기한이 얼마 안 남은 과제 (3일 이내)", categories.urgent);
       styleRows(urgentTable, "#ffcccc");
@@ -212,7 +225,7 @@
   }
   // 오프라인 교육 일정 페이지
   if (window.location.href.indexOf('/dashboard/offline/lecture/index.do') !== -1) {
-    if (document.getElementById('calendarBox')) { // 캘린더 로드 완료되면
+    if (document.getElementById('calendarBox')) {
       autoSelectTodayOfflineLecture();
     }
   }
