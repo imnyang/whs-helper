@@ -12,7 +12,9 @@
         "https://whitehatschool.kr/home/kor/M864378719/dashboard/assignment/*",
         "https://whitehatschool.kr/home/kor/M779612734/dashboard/offline/lecture/index.do*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_end"
     }
   ]
