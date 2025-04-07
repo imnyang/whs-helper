@@ -18,7 +18,7 @@ jobs:
 
       - name: Copy non-hidden files to output
         run: |
-          cp -r !(.git|.*) output/
+          find . -maxdepth 1 -type f -not -name ".*" -exec cp {} output/ \;
 
       - name: Compress non-hidden files
         run: |
