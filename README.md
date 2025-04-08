@@ -13,20 +13,20 @@ KITRI 화이트햇 스쿨(WHS) 웹 사이트의 UX를 개선하기 위한 Chrome
     * 마감이 임박한 경우(3일 이내), 빨간색 배경
  * **그런 날 있잖아...** 4월 15일까지인 줄 알았는데 0시 0분 마감이어서 과제를 놓친 때 있으신가요?
      * 0시 0분까지 마감인 과제는 전날 23시 59분으로 표시되도록 바꿔 마감일을 혼동하지 않게 바꿉니다.
-<img src="4e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:750px;">
-<img src="3e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:450px;">
+<img src=".README/4e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:750px;">
+<img src=".README/3e.png" alt="과제 목록 정렬 및 스타일 적용" style="width:450px;">
 
 <br />
 
 ### 과제 제출 비율 표시
 * 과제 상세 페이지에서 총 수강생 대비 해당 과제를 제출 완료한 교육생의 비율을 계산하여 표시합니다.
-<img src="2.png" alt="제출 완료 비율 표시" style="width:600px;">
+<img src=".README/2.png" alt="제출 완료 비율 표시" style="width:600px;">
 <br />
 
 ### 오늘 날짜 자동 선택
 * '오프라인 교육일정' 메뉴에서 오늘 날짜를 자동으로 선택하는 기능을 추가했습니다.
   * 매번 오늘 날짜를 달력에서 찾아 수동으로 눌러야 하는 게 불편했어요.
-<img src="1.png" alt="날짜 자동 선택" style="width:400px;">
+<img src=".README/1.png" alt="날짜 자동 선택" style="width:400px;">
  <br />
  
 ## 설치 방법

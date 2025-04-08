@@ -1,0 +1,29 @@
+name: Upload Artifacts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-artifacts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Make output directory
+        run: mkdir output
+
+      - name: Copy non-hidden files to output
+        run: |
+          rm -f README.md
+          find . -maxdepth 1 -type f -not -name ".*" -exec cp {} output/ \;
+
+      - name: Upload archive.zip to GitHub Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension
+          path: output
+
