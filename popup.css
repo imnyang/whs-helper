@@ -53,3 +53,12 @@ hr {
 .links a:hover {
   color: #005bb5;
 }
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 8px;
+}
