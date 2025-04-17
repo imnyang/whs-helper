@@ -47,11 +47,8 @@
     rows.forEach((row) => {
       const statusCell = row.cells[3];
       const periodCell = row.cells[2];
-      const periodText = periodCell.textContent
-        .trim()
-        .replace(/\(.*?\)/g, "")
-        .trim();
-      const deadlineStr = periodText.split("~")[1]?.trim() || "";
+      const periodText = periodCell.textContent.trim().replace(/\(.*?\)/g, '').trim();
+      const deadlineStr = periodText.split('~')[1]?.trim() || "";      
 
       if (!deadlineStr) return;
 
