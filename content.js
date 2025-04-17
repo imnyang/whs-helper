@@ -48,7 +48,7 @@
       const statusCell = row.cells[3];
       const periodCell = row.cells[2];
       const periodText = periodCell.textContent.trim().replace(/\(.*?\)/g, '').trim();
-      const deadlineStr = periodText.split('~')[1]?.trim() || "";      
+      const deadlineStr = periodText.split('~')[1]?.trim() || "";
 
       if (!deadlineStr) return;
 
@@ -215,8 +215,8 @@
 
     // 제출기간(세 번째 셀 "~" 뒤 부분)을 기준으로 오름차순 정렬
     rows.sort((a, b) => {
-      const aText = a.cells[2].textContent.trim();
-      const bText = b.cells[2].textContent.trim();
+      const aText = a.cells[2].textContent.trim().replace(/\(.*?\)/g, '').trim();
+      const bText = b.cells[2].textContent.trim().replace(/\(.*?\)/g, '').trim();      
       const aDeadlineStr = aText.split("~")[1]?.trim() || "";
       const bDeadlineStr = bText.split("~")[1]?.trim() || "";
       const aDeadline = parseDeadline(aDeadlineStr);
@@ -240,8 +240,9 @@
       tbody.appendChild(row);
       const statusCell = row.cells[3]; // 제출현황 셀
       const periodCell = row.cells[2]; // 제출기간 셀
-      const periodText = periodCell.textContent.trim();
-      const deadlineStr = periodText.split("~")[1]?.trim() || "";
+      const periodText = periodCell.textContent.trim().replace(/\(.*?\)/g, '').trim();
+      const deadlineStr = periodText.split('~')[1]?.trim() || "";
+      
       if (!deadlineStr) return;
       const deadline = parseDeadline(deadlineStr);
       const deadlineDate = new Date(
