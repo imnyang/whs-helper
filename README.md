@@ -30,7 +30,7 @@ KITRI 화이트햇 스쿨(WHS) 웹 사이트의 UX를 개선하기 위한 Chrome
  <br />
  
 ## 설치 방법
-1. 이 Git Repository를 Clone 하거나 [Release](https://github.com/ssogari-dev/whs-helper/releases/tag/release)에서 압축된 파일을 다운로드합니다.
+1. 이 Git Repository를 Clone 하거나 [Release](https://github.com/ssogari-dev/whs-helper/releases/)에서 압축된 파일을 다운로드합니다.
 2. Chrome/Chromium 브라우저에서 `chrome://extensions`로 이동 후 **개발자 모드**를 활성화합니다.
 3. '**압축 해제된 확장 프로그램 로드**' 또는 '**압축 풀린 파일 로드**'를 클릭하여 Clone된 Repository 또는 압축해제한 디렉터리를 선택합니다.
 4. 확장 프로그램 목록에 WHS Helper가 표시되면 사용 가능합니다.
