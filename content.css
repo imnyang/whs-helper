@@ -1,0 +1,7 @@
+.tr-urgent { background-color: #ffcccc !important; }
+.tr-submitted { background-color: #cce5ff !important; }
+.tr-expired { 
+  background-color: #f0f0f0 !important;
+  color: #666 !important;
+  text-decoration: line-through;
+}

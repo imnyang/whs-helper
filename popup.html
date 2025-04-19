@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
-  <title>Whitehat School Helper</title>
-  <!-- Font Awesome 외부 CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Tailwind -->
-  <script src="tailwind.js"></script>
-
+  <title>WHS Helper 설정</title>
   <link rel="stylesheet" href="popup.css">
 </head>
-
 <body>
   <div class="container">
-    <h1>WHS Helper</h1>
-    <p>과제 정렬 순서대로 하고 싶었어요</p>
-    <p>온라인 교육에서 오늘 날짜 안눌러지는거 불편했어요</p>
-    <p>아마 언젠가 사이트가 더 개선된다면 필요없어 질 거 같은데</p>
-    <hr>
-    <h2>WHS 3기 파이팅</h2>
-    <p>기여는 늘 환영입니다.</p>
-    <hr>
-    <div class="checkbox-container">
-      <input type="checkbox" id="splitTable">
-      <p>Table을 나눠서 표시</p>
+    <header class="popup-header">
+      <h1 class="popup-title">WHS Helper 설정</h1>
+      <p class="popup-version">v1.3.0</p>
+    </header>
+
+    <div class="toggle-group" role="group" aria-labelledby="toggle-group-label">
+      <h2 id="toggle-group-label" class="sr-only">과제 표시 설정</h2>
+      
+      <!-- 테이블 분할 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">테이블 분할 표시</span>
+          <span class="toggle-description">과제 상태별로 그룹화하여 표시</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="splitTableToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <!-- 제출완료 취소선 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">제출완료 취소선</span>
+          <span class="toggle-description">제출한 과제에 취소선 적용</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="submittedStrikeToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <!-- 마감 미제출 표시 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">마감 미제출 표시</span>
+          <span class="toggle-description">기한 지난 미제출 과제 표시</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="showExpiredUnsubmittedToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
     </div>
-    <hr>
-    <p>Copyleft 🄯 쏘가리스튜디오</p>
-    <p>3기 23반 황보현 제작</p>
-    <div class="links">
-      <a href="https://github.com/ssogari-dev/whs-helper" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="javascript:alert('admin@ssogari.dev')" title="메일주소">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </div>
+
+    <footer class="popup-footer">
+      <p class="copyright">Copyleft 쏘가리스튜디오<br>3기 23반 황보현 / 21반 남현석 제작</p>
+    </footer>
   </div>
+  <script src="popup.js"></script>
 </body>
-
-<script src="popup.js"></script>
-
 </html>
