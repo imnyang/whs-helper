@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>WHS Helper 설정</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="popup-header">
+      <h1 class="popup-title">WHS Helper 설정</h1>
+      <p class="popup-version">v1.3.0</p>
+    </header>
+
+    <div class="toggle-group" role="group" aria-labelledby="toggle-group-label">
+      <h2 id="toggle-group-label" class="sr-only">과제 표시 설정</h2>
+      
+      <!-- 테이블 분할 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">테이블 분할 표시</span>
+          <span class="toggle-description">과제 상태별로 그룹화하여 표시</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="splitTableToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <!-- 제출완료 취소선 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">제출완료 취소선</span>
+          <span class="toggle-description">제출한 과제에 취소선 적용</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="submittedStrikeToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <!-- 마감 미제출 표시 토글 -->
+      <div class="toggle-item">
+        <div class="toggle-meta">
+          <span class="toggle-label">마감 미제출 표시</span>
+          <span class="toggle-description">기한 지난 미제출 과제 표시</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="showExpiredUnsubmittedToggle" aria-checked="false">
+          <span class="slider" aria-hidden="true"></span>
+        </label>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <p class="copyright">Copyleft 쏘가리스튜디오<br>3기 23반 황보현 / 21반 남현석 제작</p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
