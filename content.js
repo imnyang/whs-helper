@@ -175,7 +175,7 @@
     // 마감 미제출 과제 표시 옵션
     if (options.showExpiredUnsubmitted && categories.expired.length > 0) {
       const expiredTable = createTable("마감된 과제", categories.expired);
-      styleRows(expiredTable, "gray", "line-through");
+      styleRows(expiredTable, "#f0f0f0", "line-through");
     }
     if (categories.submittedExpired.length > 0) {
       const submittedExpiredTable = createTable("제출 완료한 마감된 과제", categories.submittedExpired);
@@ -371,15 +371,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     applyAssignmentList();
   }
 });
-
-// 스타일 충돌 방지를 위한 클래스 추가
-function styleRows(table, className) {
-  const rows = table.querySelectorAll('tr');
-  rows.forEach(row => {
-    row.className = className; /* 기존 inline style → CSS 클래스 사용 */
-  });
-}
-
 
   // 페이지별 적용
   if (document.querySelector(".table_basics_area")) {
